@@ -9,3 +9,12 @@ defs = Defs(
           Edit(ECF_HOME=home),
           Task('t1')))
 print(defs)
+
+print("Checking job creation: .ecf -> .job0")
+print(defs.check_job_creation())
+
+print("Saving definition to file 'test.def'")
+defs.save_as_defs(str(Path(home, "test.def")))
+
+# To restore the definition from file 'test.def' we can use:
+# restored_defs = ecflow.Defs("test.def")
