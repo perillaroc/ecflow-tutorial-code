@@ -1,0 +1,14 @@
+%manual
+   Manual for task t2
+   Operations: if this task fails, set it to complete and report next working day
+   Analyst:    Check something ?
+%end
+ 
+%include <head.h>
+echo "I am part of a suite that lives in %ECF_HOME%"
+%include <tail.h>
+ 
+%manual
+   There can be multiple manual pages in the same file.
+   When viewed they are simply concatenated.
+%end
