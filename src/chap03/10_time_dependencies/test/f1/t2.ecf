@@ -1,0 +1,8 @@
+%include <head.h>
+echo "I will now sleep for %SLEEP% seconds"
+sleep %SLEEP%
+# ecflow_client --event=a       # Set the first event
+sleep %SLEEP%                 # Sleep a bit more
+# ecflow_client --event=b       # Set the second event
+sleep %SLEEP%                 # A last nap...
+%include <tail.h>

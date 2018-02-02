@@ -1,0 +1,11 @@
+%include <head.h>
+
+# copy the log file to the ECF_HOME/log directory
+ECF_SERVER_HOME=/g3/wangdp/ecf_home
+test -d ${ECF_SERVER_HOME}/log || mkdir -p ${ECF_SERVER_HOME}/log
+cp %ECF_LOG% ${ECF_SERVER_HOME}/log/.
+
+# clear the log file
+ecflow_client  --log=clear
+
+%include <tail.h>
